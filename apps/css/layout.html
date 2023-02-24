@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>页面居中</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="" />
+    <style>
+      body {
+        overflow: auto;
+
+        display: flex;
+        justify-content: space-around;
+      }
+      .div1,
+      .div3,
+      .div5,
+      .div7 {
+        width: 400px;
+        height: 400px;
+        background-color: red;
+        margin-bottom: 20px;
+      }
+      .div2,
+      .div4,
+      .div6,
+      .div8 {
+        width: 200px;
+        height: 200px;
+        background-color: green;
+        display: flex; 
+        align-items: center;
+        justify-content: center;
+      }
+
+      /* margin 居中 */
+      .div2 {
+        margin: 0 auto;
+      }
+
+      /* flex居中 */
+      .div3 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      /*positon + transform*/
+      .div5 {
+        position: relative;
+      }
+      .div6 {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      /*postion+calc*/
+
+      .div7 {
+        position: relative;
+      }
+      .div8 {
+        position: absolute;
+        left: calc(50% - 100px);
+        top: calc(50% - 100px);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="div1">
+      <div class="div2">margin</div>
+    </div>
+
+    <div class="div3">
+      <div class="div4">flex居中</div>
+    </div>
+
+    <div class="div5">
+      <div class="div6">positon + transform</div>
+    </div>
+
+    <div class="div7">
+      <div class="div8">postion+calc</div>
+    </div>
+  </body>
+</html>
